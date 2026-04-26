@@ -84,39 +84,39 @@ export function RegisterForm() {
 
   return (
     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-      <AuthError message={error?.message} />
-      
-      <FormInput
-        placeholder="Name"
-        {...form.register("name")}
-        disabled={loading}
-        error={form.formState.errors.name?.message}
-      />
-      <FormInput
-        type="email"
-        placeholder="Email"
-        {...form.register("email")}
-        disabled={loading}
-        error={form.formState.errors.email?.message}
-      />
-      <FormInput
-        type="password"
-        placeholder="Password"
-        {...form.register("password")}
-        disabled={loading}
-        error={form.formState.errors.password?.message}
-      />
-      <FormInput
-        type="password"
-        placeholder="Confirm Password"
-        {...form.register("confirmPassword")}
-        disabled={loading}
-        error={form.formState.errors.confirmPassword?.message}
-      />
-      
-      <Button type="submit" className="w-full" disabled={loading}>
-        {loading ? "Creating account..." : "Create account"}
-      </Button>
-    </form>
-  );
-} 
+    <AuthError message={error?.message} />
+    
+    <FormInput
+      placeholder="Name"
+      {...form.register("name")}
+      disabled={loading}
+      error={form.formState.errors.name?.message}
+    />
+    <FormInput
+      type="email"
+      placeholder="Email"
+      {...form.register("email")}
+      disabled={loading}
+      error={form.formState.errors.email?.message}
+    />
+    <FormInput
+      type="password"
+      placeholder="Password"
+      {...form.register("password")}
+      disabled={loading}
+      error={form.formState.errors.password?.message}
+    />
+    <FormInput
+      type="password"
+      placeholder="Confirm Password"
+      {...form.register("confirmPassword")}
+      disabled={loading}
+      error={form.formState.errors.confirmPassword?.message}
+    />
+    
+    <Button type="submit" className="w-full" disabled={loading}>
+      {loading ? "Creating account..." : "Create account"}
+    </Button>
+  </form>
+);
+}
